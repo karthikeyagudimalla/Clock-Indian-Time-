@@ -1,15 +1,11 @@
 import time
 from tkinter import *
 from math import sin, cos,radians
-import winsound
+
 
 
 def mov_sec():
     def move():
-        winsound.PlaySound(
-        r"C:\Users\user\Downloads\tick.wav",
-        winsound.SND_FILENAME | winsound.SND_ASYNC
-        )
         t=time.localtime()
         angle=radians((t.tm_sec)*6)
         x1=400+250*sin(angle)
